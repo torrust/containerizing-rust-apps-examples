@@ -1,6 +1,6 @@
 # Custom dependencies cache (without cargo chef)
 
-In this example, the application has some dependencies that are not cached by using docker layers.
+In this example, the application has some dependencies that are cached by using docker layers.
 
 It's done the way it was done before having [cargo chef](https://github.com/LukeMathWalker/cargo-chef).
 
