@@ -152,7 +152,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "custom-dependencies-cache"
+name = "dependencies-cache-with-cargo-chef"
 version = "0.1.0"
 dependencies = [
  "doga-english-greetings",
