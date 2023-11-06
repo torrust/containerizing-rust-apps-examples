@@ -1,0 +1,16 @@
+#!/bin/sh
+set -x
+
+# Check if USER_ID is set, and is greater than 1000
+if [ -z "$USER_ID" ] && [ "$USER_ID" -lt 1000 ]; then
+    echo "ERROR: USER_ID is not set, or less than 1000"
+    exit 1
+fi
+
+# Add appuser user, based upon supplied USER_ID
+adduser --disabled-password --shell "/bin/sh" --uid "$USER_ID" "appuser"
+
+cd /home/appuser || exit 1
+
+# Switch to appuser user
+exec /bin/su-exec appuser "$@"
